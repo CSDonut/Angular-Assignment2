@@ -11,9 +11,17 @@
   <p>{{getUsername()}}</p>
 
   <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+<!--  <button-->
+<!--    class = "btn btn-primary"-->
+<!--    [disabled] = "!allowButtonClick"-->
+<!--    (click)="onUsernameClick()"-->
+<!--  >Accept Username-->
+<!--  </button>-->
+
+<!--  Alternate way to make button -->
   <button
     class = "btn btn-primary"
-    [disabled] = "!allowButtonClick"
+    [disabled] = "getUsername() === ''"
     (click)="onUsernameClick()"
   >Accept Username
   </button>
